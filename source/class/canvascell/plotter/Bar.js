@@ -49,7 +49,7 @@ qx.Class.define("canvascell.plotter.Bar", {
             var d = cellInfo.value;
             var redraw = false;
 
-            if (isNaN(d)) {
+            if (isNaN(d)){
                 return false;
             }
 
@@ -59,7 +59,9 @@ qx.Class.define("canvascell.plotter.Bar", {
                 this.__max = d;
                 redraw = true;
             }
-
+            if (this.__max == 0){
+                return false;
+            }
             var bar = Math.round(d * (w - 4) / this.__max);
             c.strokeWidth = 0.5;
             c.fillStyle = cfg.fill;
