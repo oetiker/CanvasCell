@@ -179,6 +179,8 @@ qx.Class.define("canvascell.Renderer", {
 
     destruct : function() {
         // Remove event handlers
-        this.__pane.addListener("paneUpdated", this.__update, this);
+        if (qx.lang.Type.isObject(this.__pane)){
+            this.__pane.addListener("paneUpdated", this.__update, this);
+        }
     }
 });
