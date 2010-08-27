@@ -1,9 +1,18 @@
 /* ************************************************************************
 
-   Copyright: Public Domain
-   Authors: Tobi Oetiker <tobi@oetiker.ch>
+   Copyright:
+     2010 OETIKER+PARTNER AG, http://www.oetiker.ch
+     
+   License:
+     LGPL: http://www.gnu.org/licenses/lgpl.html
+     EPL: http://www.eclipse.org/org/documents/epl-v10.php
+     See the LICENSE file in the project's top-level directory for details.
+
+   Authors:
+     * Tobias Oetiker (oetiker)
 
 ************************************************************************ */
+// Utf8Check: äöü
 
 /**
  * This is the main application class of your custom application "canvascell"
