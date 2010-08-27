@@ -55,7 +55,7 @@ qx.Class.define("canvascell.Renderer", {
             }
 
             this.self(arguments).__count++;
-            var id = 'remocular.ui.PlotCell.' + (this.self(arguments).__count.toString(36));
+            var id = 'canvascell.Renderer.' + (this.self(arguments).__count.toString(36));
 
             this.__queue.push({
                 id : id,
