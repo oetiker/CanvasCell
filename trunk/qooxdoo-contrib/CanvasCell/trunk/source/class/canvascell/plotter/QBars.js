@@ -88,7 +88,7 @@ qx.Class.define("canvascell.plotter.QBars", {
             var step = w / d.length;
             var vPad = 3;            
             for (var i=0;i<d.length;i++){                
-                 var bad = bar.left > i || d.length - bar.right < i;
+                 var bad = bar.left > i || d.length - bar.right =< i;
                  c.fillStyle = bad ? cfg.badBgColor : cfg.goodBgColor;
                  c.fillRect(i*step,vPad,step,h-2*vPad);
                  if (max > 0){
