@@ -32,7 +32,7 @@ qx.Class.define("canvascell.demo.Application", {
                 allowClose: false,
                 allowMinimize: false,
                 contentPadding: 0,
-                width: 500,
+                width: 800,
                 height: 300
             });
             win.addListener('appear',function(){
@@ -42,7 +42,7 @@ qx.Class.define("canvascell.demo.Application", {
 
             // table model
             var tableModel = new qx.ui.table.model.Simple();
-            tableModel.setColumns([ this.tr("ID"), "Bar", "Spark", "TwoBar","QBars" ]);
+            tableModel.setColumns([ this.tr("ID"), "Bar", "Spark", "TwoBar","QBars","DoubleBar" ]);
             tableModel.setData(this.createRandomRows(100));
             // table
             var table = new qx.ui.table.Table(tableModel).set({
@@ -90,8 +90,19 @@ qx.Class.define("canvascell.demo.Application", {
                 })
             );
             tColMod.setDataCellRenderer(4,qBarsRenderer);
+
+            var doubleBarRenderer = new canvascell.Renderer(
+                new canvascell.plotter.DoubleBar({
+                    upFill    : '#b00',
+                    upBorder  : '#a00',
+                    downFill   : '#b80',
+                    downBorder : '#a70'
+                })
+            );
+            tColMod.setDataCellRenderer(5,doubleBarRenderer);
             win.add(table);
         },
+
         createRandomRows: function(rowCount) {
             var rowData = [];
             var now = new Date().getTime();
@@ -111,7 +122,11 @@ qx.Class.define("canvascell.demo.Application", {
                     mainbar: Math.random()*10,
                     stackbar: Math.random()*3
                 };
-                rowData.push([row,row,spark,two,qBars]);
+                var dbl = [
+                    Math.random()*10,
+                    Math.random()*10,
+                ];
+                rowData.push([row,row,spark,two,qBars,dbl]);
             }
             return rowData;
         }
