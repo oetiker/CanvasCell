@@ -124,7 +124,7 @@ qx.Class.define("canvascell.demo.Application", {
                 };
                 var dbl = [
                     Math.random()*10,
-                    Math.random()*10,
+                    Math.random()*10
                 ];
                 rowData.push([row,row,spark,two,qBars,dbl]);
             }
