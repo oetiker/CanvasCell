@@ -29,10 +29,10 @@
   {
     "APPLICATION"  : "canvascell",
     "APPLICATION_MAIN_CLASS" : "${APPLICATION}.demo.Demo",
-    "QOOXDOO_PATH" : "../../qooxdoo/1.2",
+    "QOOXDOO_PATH" : "../../qooxdoo/1.3",
     //"QXTHEME"      : "canvascell.theme.modern.Theme",
     "QXTHEME"      : "qx.theme.Modern",
-    "API_EXCLUDE"  : ["qx.test.*", "canvascell.demo.*", "${APPLICATION}.theme.*", "${APPLICATION}.test.*"],
+    "API_EXCLUDE"  : ["qx.*", "canvascell.demo.*", "${APPLICATION}.theme.*", "${APPLICATION}.test.*"],
     "LOCALES"      : [ "en" ],
     "CACHE"        : "${TMPDIR}/cache",
     "ROOT"         : "."
