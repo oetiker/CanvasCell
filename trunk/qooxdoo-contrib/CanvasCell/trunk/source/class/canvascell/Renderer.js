@@ -132,11 +132,13 @@ qx.Class.define("canvascell.Renderer", {
 
                         if (ctx) {
                             if (w == undefined) {
-                                var par = qx.dom.Element.getParentElement(el);
+                                var par = qx.dom.Element.getParentElement(el);                                
                                 var size = qx.bom.element.Dimension.getContentSize(par);
                                 w = size.width;
                                 h = size.height;
                             }
+                            el.width = w;
+                            el.height = h;
 
                             if (this.__plotter.plot(ctx, entry.cellInfo, w, h)) {
                                 this.__redraw();
