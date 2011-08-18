@@ -32,7 +32,7 @@
   "let" :
   {
     "APPLICATION"  : "canvascell.demo",
-    "QOOXDOO_PATH" : "../../../../qooxdoo/1.4",
+    "QOOXDOO_PATH" : "../../../../qooxdoo/1.5",
     "QXTHEME"      : "canvascell.demo.theme.Theme",
     "API_EXCLUDE"  : ["qx.*", "${APPLICATION}.theme.*", "${APPLICATION}.test.*"],
     "LOCALES"      : [ "en" ],

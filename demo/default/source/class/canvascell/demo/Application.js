@@ -22,7 +22,7 @@ qx.Class.define("canvascell.demo.Application", {
     members : {
         main : function() {
             this.base(arguments);
-            if (qx.core.Variant.isSet("qx.debug", "on")) {
+            if (qx.core.Environment.get("qx.debug")) {
                 qx.log.appender.Native;
                 qx.log.appender.Console;
             }
@@ -45,11 +45,26 @@ qx.Class.define("canvascell.demo.Application", {
             tableModel.setColumns([ this.tr("ID"), "Bar", "Spark", "TwoBar","QBars","DoubleBar" ]);
             tableModel.setData(this.createRandomRows(100));
             // table
-            var table = new qx.ui.table.Table(tableModel).set({
+            var custom = {
+                tableColumnModel : function(obj) {
+                    return new qx.ui.table.columnmodel.Resize(obj);
+                }
+            };
+
+            var table = new qx.ui.table.Table(tableModel,custom).set({
                 decorator: null
             })
 
             var tColMod = table.getTableColumnModel();
+            var resizeBehavior = tColMod.getBehavior();
+
+            // This uses the set() method to set all attriutes at once; uses flex
+            resizeBehavior.set(0, { width:"1*" });
+            resizeBehavior.set(1, { width:"1*" });
+            resizeBehavior.set(2, { width:"2*" });
+            resizeBehavior.set(3, { width:"1*" });
+            resizeBehavior.set(4, { width:"1*" });
+            resizeBehavior.set(5, { width:"1*" });
     
             var barRenderer = new canvascell.Renderer(
                 new canvascell.plotter.Bar({
