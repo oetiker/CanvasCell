@@ -29,7 +29,7 @@
   {
     "APPLICATION"  : "canvascell",
     "APPLICATION_MAIN_CLASS" : "${APPLICATION}.demo.Demo",
-    "QOOXDOO_PATH" : "../../qooxdoo/1.5",
+    "QOOXDOO_PATH" : "../../qooxdoo/2.0",
     //"QXTHEME"      : "canvascell.theme.modern.Theme",
     "QXTHEME"      : "qx.theme.Modern",
     "API_EXCLUDE"  : ["qx.*", "canvascell.demo.*", "${APPLICATION}.theme.*", "${APPLICATION}.test.*"],
