@@ -30,7 +30,12 @@ qx.Class.define("canvascell.plotter.Bar", {
      * <pre class='javascript'>
      * cfg = {
      *    fill:   '#color',
-     *    border: '#color' 
+     *    border: '#color',
+	 *    fillText: {
+	 *      font: '#font',
+	 *      fill: '#color'
+	 *    }
+     *    max: number 
      * };
      * </pre>
      */
@@ -55,7 +60,7 @@ qx.Class.define("canvascell.plotter.Bar", {
          * @return {boolean} should the other cells be redrawn because the scaling has changed?
          */
         plot : function(c, cellInfo, w, h) {
-            var d = cellInfo.value;
+            var d = cellInfo.value || 0.00;
             var redraw = false;
 
             if (isNaN(d)){
@@ -76,7 +81,12 @@ qx.Class.define("canvascell.plotter.Bar", {
             c.fillStyle = cfg.fill;
             c.strokeStyle = cfg.border;
             c.fillRect(0.5, 2.5, bar, h - 6);
-            c.strokeRect(0.5, 2.5, bar, h - 6);
+            c.strokeRect(0.5, 2.5, cfg.max ? w - 4 : bar, h - 6);
+			if (cfg.fillText){
+				c.font = cfg.fillText.font
+				c.fillStyle = cfg.fillText.fill;
+				c.fillText(d + "%", w / 3, h - 6);
+			}
             return redraw;
         },
 
@@ -85,7 +95,11 @@ qx.Class.define("canvascell.plotter.Bar", {
          * reset any context data stored inside the plotter
          */
         reset : function() {
-            this.__max = 0;
+			if (this.__cfg.max) {
+            	this.__max = this.__cfg.max;
+			} else {
+            	this.__max = 0;
+			}
         }
     }
 });
