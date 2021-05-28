@@ -1,4 +1,4 @@
-{
+{"$schema": "https://qooxdoo.org/schema/compile-1-0-0.json",
   "targets": [
     {
       "type": "source",
