@@ -1,34 +1,24 @@
 {
-  "info" : 
-  {
-    "name" : "CanvasCell",
-
-    "summary" : "canvas cell renderer for the qooxdoo table widget",
-    "description" : "a custom cellrenderer for ccreating tiny plots inside table cells.",
-    
-    "homepage" : "http://contrib.qooxdoo.org/project/CanvasCell",
-
-    "license" : "LGPL/EPL",
-    "authors" : 
-    [
+  "info": {
+    "name": "CanvasCell",
+    "summary": "canvas cell renderer for the qooxdoo table widget",
+    "description": "a custom cellrenderer for ccreating tiny plots inside table cells.",
+    "homepage": "http://contrib.qooxdoo.org/project/CanvasCell",
+    "license": "LGPL/EPL",
+    "authors": [
       {
-        "name" : "Tobi Oetiker (oetiker)",
-        "email" : "tobi@oetiker.ch"
+        "name": "Tobi Oetiker (oetiker)",
+        "email": "tobi@oetiker.ch"
       }
     ],
-
-    "version" : "trunk",
-    "qooxdoo-versions": ["1.x - 5.x"]
+    "version": "1.0.1"
   },
-  
-  "provides" : 
-  {
-    "namespace"   : "canvascell",
-    "encoding"    : "utf-8",
-    "class"       : "source/class",
-    "resource"    : "source/resource",
-    "translation" : "source/translation",
-    "type"        : "contribution"
-  }
+  "provides": {
+    "namespace": "canvascell",
+    "encoding": "utf-8",
+    "class": "source/class",
+    "resource": "source/resource",
+    "translation": "source/translation"
+  },
+  "$schema": "https://qooxdoo.org/schema/Manifest-1-0-0.json"
 }
-
