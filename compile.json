@@ -1,0 +1,29 @@
+{
+  "targets": [
+    {
+      "type": "source",
+      "outputPath": "source-output"
+    },
+    {
+      "type": "build",
+      "outputPath": "build-output"
+    }
+  ],
+  "defaultTarget": "source",
+  "serve": {
+    "listenPort": 8749
+  },
+  "locales": [
+    "en"
+  ],
+  "environment": {
+    "qx.icontheme": "Tango"
+  },
+  "applications": [
+    {
+      "class": "canvascell.demo.Application",
+      "theme": "qx.theme.Simple",
+      "name": "canvascell-demo"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="${resourcePath}${appPath}favicon.ico">
+  <title>${appTitle}</title>
+  <style>
+    #hin-loader {
+            width: 100%;
+            height: 100%;
+            color: #F29800;
+    }
+    #hin-loader .dot {
+            -webkit-animation: hin_loader_dot 1s infinite;
+            animation: hin_loader_dot 1s infinite;
+            -webkit-transform-origin: center;
+            transform-origin: center
+    }
+
+    #hin-loader .dot-1 {
+            -webkit-animation-delay: 0ms;
+            animation-delay: 0ms
+    }
+    #hin-loader .dot-2 {
+            -webkit-animation-delay: .1s;
+            animation-delay: .1s
+    }
+    #hin-loader .dot-3 {
+            -webkit-animation-delay: .2s;
+            animation-delay: .2s
+    }
+    #hin-loader .dot-4 {
+            -webkit-animation-delay: .3s;
+            animation-delay: .3s
+    }
+    #hin-loader .dot-5 {
+            -webkit-animation-delay: .4s;
+            animation-delay: .4s
+    }
+
+    @-webkit-keyframes hin_loader_dot {
+            0% {
+                    -webkit-transform: scale(.1) rotate(45deg) translate3d(-25%, -25%, 0);
+                    transform: scale(.1) rotate(45deg) translate3d(-25%, -25%, 0)
+            }
+            30% {
+                    -webkit-transform: scale(1) rotate(0deg) translateZ(0);
+                    transform: scale(1) rotate(0deg) translateZ(0)
+            }
+            70% {
+                    -webkit-transform: scale(1) rotate(0deg) translateZ(0);
+                    transform: scale(1) rotate(0deg) translateZ(0)
+            }
+            to {
+                    -webkit-transform: scale(.1) rotate(0) translate3d(25%, 25%, 0);
+                    transform: scale(.1) rotate(0) translate3d(25%, 25%, 0)
+            }
+    }
+    @keyframes hin_loader_dot {
+            0% {
+                    -webkit-transform: scale(.1) rotate(45deg) translate3d(-25%, -25%, 0);
+                    transform: scale(.1) rotate(45deg) translate3d(-25%, -25%, 0)
+            }
+            30% {
+                    -webkit-transform: scale(1) rotate(0deg) translateZ(0);
+                    transform: scale(1) rotate(0deg) translateZ(0)
+            }
+            70% {
+                    -webkit-transform: scale(1) rotate(0deg) translateZ(0);
+                    transform: scale(1) rotate(0deg) translateZ(0)
+            }
+            to {
+                    -webkit-transform: scale(.1) rotate(0) translate3d(25%, 25%, 0);
+                    transform: scale(.1) rotate(0) translate3d(25%, 25%, 0)
+            }
+    }
+
+</style>
+
+</head>
+<body>
+    <div id="op-loading" style="position: absolute; left: 50%;top: 50%; transform: translate(-50%,-50%); text-align: center;font-family: sans-serif;">
+        <svg id="hin-loader" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path class="dot dot-top dot-4" fill="currentColor" d="M58.703 43c.47 0 .98-.144 1.498-.403.52-.258 1.045-.632 1.552-1.094.506-.463.987-1.013 1.418-1.623.43-.61.804-1.277 1.097-1.974.292-.698.47-1.357.548-1.954.075-.595.049-1.127-.072-1.57-.121-.44-.339-.793-.642-1.033-.302-.238-.69-.361-1.158-.348-.467.013-.967.163-1.475.424a6.972 6.972 0 00-1.513 1.078 10.23 10.23 0 00-1.385 1.578 10.55 10.55 0 00-1.086 1.925 7.803 7.803 0 00-.57 1.932c-.086.595-.075 1.133.033 1.585.11.455.312.824.607 1.077.294.257.68.4 1.148.4" />
+            <path class="dot dot-middle-left dot-3" fill="currentColor" d="M44.315 54.999c.459.015.962-.114 1.476-.359a6.807 6.807 0 001.553-1.062c.51-.451 1-.994 1.44-1.6.441-.602.83-1.267 1.14-1.965.31-.696.507-1.36.605-1.962.095-.6.087-1.14-.015-1.594-.103-.451-.301-.815-.588-1.066-.285-.25-.66-.39-1.116-.391-.456 0-.95.135-1.455.382a6.83 6.83 0 00-1.513 1.046c-.496.441-.974.97-1.408 1.555-.43.585-.817 1.234-1.128 1.916a8.227 8.227 0 00-.623 1.939c-.108.6-.115 1.147-.025 1.609.089.464.274.844.552 1.112.279.267.649.424 1.105.44" />
+            <path class="dot dot-middle-right dot-2" fill="currentColor" d="M52.946 54.999c.465.015.971-.113 1.489-.357.518-.246 1.046-.61 1.552-1.062a9.937 9.937 0 001.427-1.599 10.58 10.58 0 001.114-1.968 7.823 7.823 0 00.568-1.964c.084-.6.065-1.141-.05-1.594-.116-.45-.327-.815-.623-1.066-.295-.25-.68-.389-1.142-.389-.463-.002-.962.135-1.468.38a6.812 6.812 0 00-1.513 1.045 9.912 9.912 0 00-1.392 1.556 10.55 10.55 0 00-1.102 1.916c-.301.686-.496 1.34-.59 1.939-.096.602-.09 1.148.012 1.61.1.464.297.845.586 1.113.287.27.667.425 1.132.44" />
+            <path class="dot dot-bottom dot-1" fill="currentColor" d="M37.668 66.995c.453.03.95-.084 1.464-.317.514-.233 1.04-.584 1.553-1.027a9.934 9.934 0 001.449-1.576c.444-.599.84-1.259 1.157-1.957a8.13 8.13 0 00.628-1.971c.104-.607.104-1.154.008-1.616-.096-.46-.286-.836-.567-1.1-.28-.263-.65-.414-1.102-.43-.45-.016-.94.107-1.444.341a6.7 6.7 0 00-1.513 1.012c-.496.433-.977.951-1.413 1.533a10.723 10.723 0 00-1.144 1.907 8.383 8.383 0 00-.647 1.944c-.114.608-.13 1.16-.047 1.631.08.474.26.864.53 1.146.272.28.634.45 1.088.48" />
+        </svg>
+        <div id="op-percent"></div>
+    </div>
+    <script>
+    (function(){
+        let splash = document.getElementById('op-loading');
+        let output = document.getElementById('op-percent');
+        window.QOOXDOO_SPLASH_SCREEN = {
+            loadBegin: function(callback) {
+                callback();
+            },
+
+            loadComplete: function(callback) {
+                output = null;
+                if (splash.remove) {
+                  splash.remove();
+                }
+                else if (splash.parentNode) {
+                  splash.parentNode.removeChild(splash);
+                }
+                splash = null;
+                callback();
+            },
+
+            scriptLoaded: function(options, callback) {
+                let out = Math.round(options.numScriptsLoaded/options.numScripts*100) + '% ';
+                output.innerHTML = out;
+                callback();
+            },
+            getSettings: function() {
+                return {
+                    isLoadChunked: true,
+                    loadChunkSize: 1
+                };
+            }
+        };
+    }());
+    </script>
+    ${preBootJs}
+    <script type="text/javascript" src="${appPath}index.js?version=#VERSION#"></script>
+</body>
+</html>
