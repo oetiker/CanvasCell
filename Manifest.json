@@ -11,13 +11,12 @@
         "email": "tobi@oetiker.ch"
       }
     ],
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "provides": {
     "namespace": "canvascell",
     "encoding": "utf-8",
     "class": "source/class",
-    "resource": "source/resource",
     "translation": "source/translation"
   },
   "$schema": "https://qooxdoo.org/schema/Manifest-2-0-0.json",
